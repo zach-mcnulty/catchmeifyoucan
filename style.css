@@ -1,0 +1,38 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-image: url("images/spookyBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#wrapper {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+@keyframes float {
+  0% {margin-top: 0px;}
+  25% {margin-top: 10px;}
+  50% {margin-top: 0px;}
+  75% {margin-top: 5px;}
+  100% {margin-top: 0px;}
+}
+#ghost {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  margin-top: 0px;
+  animation: float 3s infinite ease;
+  transition: 1.6s all;
+}
+#ghost:hover {
+  animation: vanish 0.8s ease-in -0.2s;
+}
+@keyframes vanish {
+  0% {opacity: 80%;}
+  50% {opacity: 10%;}
+  100% {opacity: 100%;}
+}
